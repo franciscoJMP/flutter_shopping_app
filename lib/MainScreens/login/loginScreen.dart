@@ -17,11 +17,15 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  static MyFieldForm email_field =
+      MyFieldForm(title: TextApp.EMAIL_FIELD, isPassword: false);
+  static MyFieldForm password_field =
+      MyFieldForm(title: TextApp.PASSWORD_FIELD, isPassword: true);
   Widget _emailPasswordWidget() {
     return Column(
       children: [
-        MyFieldForm(TextApp.EMAIL_FIELD, false),
-        MyFieldForm(TextApp.PASSWORD_FIELD, true),
+        email_field,
+        password_field,
       ],
     );
   }
@@ -92,15 +96,15 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
+    final List<MyFieldForm> fields = [];
+    fields.add(email_field);
+    fields.add(password_field);
+
     return SafeArea(
         child: Scaffold(
       body: Stack(
         children: [
           ContainerShape01(),
-          Positioned(
-            top: height * .020,
-            child: MyBackButton(),
-          ),
           Container(
             height: double.infinity,
             width: double.infinity,
@@ -115,8 +119,15 @@ class _LoginScreenState extends State<LoginScreen> {
                   Padding(
                       padding: EdgeInsets.only(top: height * .03),
                       child: _emailPasswordWidget()),
-                  MyLoginButton(TextApp.LOGIN, Colors.white,
-                      Theme.of(context).primaryColor, HomeScreen(), 20.0),
+                  MyLoginButton(
+                    text: TextApp.LOGIN,
+                    colorText: Colors.white,
+                    colorButtonBackgroud: Theme.of(context).primaryColor,
+                    widgetToNavigate: HomeScreen(),
+                    paddingTop: 20.0,
+                    fields: fields,
+                    screen: "login",
+                  ),
                   _forgottenPassword(),
                   _divider(),
                   Container(
@@ -134,7 +145,11 @@ class _LoginScreenState extends State<LoginScreen> {
                 ],
               ),
             ),
-          )
+          ),
+          Positioned(
+            top: height * .025, //0.25%
+            child: MyBackButton(),
+          ),
         ],
       ),
     ));

@@ -11,6 +11,19 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(), body: Center());
+    return DefaultTabController(
+        length: 4,
+        child: Scaffold(
+          appBar: AppBar(
+            bottom: TabBar(
+              tabs: [
+                Tab(
+                  text: "Inicio",
+                )
+              ],
+            ),
+          ),
+          body: Center(),
+        ));
   }
 }

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "314319318806",
+    "project_id": "shoppinglistflutter-f63c1",
+    "storage_bucket": "shoppinglistflutter-f63c1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:314319318806:android:c40d34647aa1fa20d3aa37",
+        "android_client_info": {
+          "package_name": "com.example.shopping_list"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "314319318806-nb6r37nku81pi9pel94i1h98lm7qpr7s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB02uGIcwTDK838LSq8Rj8MNZTLqETcA5g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "314319318806-nb6r37nku81pi9pel94i1h98lm7qpr7s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -9,4 +9,6 @@ class TextApp {
   static const String OR = "o";
   static const String GOOGLE_SIGN = "Inicia sesion con Google";
   static const String DONT_HAVE_ACCOUNT = "¿No tienes cuenta?";
+  static const String USER_NAME = "Nombre de usuario";
+  static const String I_HAVE_ACCOUNT = "¿Ya tienes una cuenta?";
 }

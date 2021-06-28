@@ -11,7 +11,7 @@ class ContainerShape01 extends StatelessWidget {
       child: ClipPath(
         clipper: WaveClipperTwo(),
         child: Container(
-          height: MediaQuery.of(context).size.height * .13,
+          height: MediaQuery.of(context).size.height * .15,
           width: MediaQuery.of(context).size.width,
           decoration:
               BoxDecoration(gradient: DesingAssets.linearGradientMain(context)),

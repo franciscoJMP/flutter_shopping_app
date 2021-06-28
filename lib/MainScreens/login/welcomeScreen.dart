@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shopping_list/MainScreens/login/loginScreen.dart';
+import 'package:shopping_list/MainScreens/login/signUp.dart';
 import 'package:shopping_list/Utils/TextApp.dart';
 import 'package:shopping_list/Widgets/Buttons/myLoginButton.dart';
 import 'package:shopping_list/Widgets/Desing/DesingAssets.dart';
@@ -20,7 +21,7 @@ Widget _singUp(BuildContext context) {
       padding: EdgeInsets.all(15.0),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
       onPressed: () => Navigator.push(
-          context, MaterialPageRoute(builder: (context) => LoginScreen())),
+          context, MaterialPageRoute(builder: (context) => SignUp())),
       child: Text(
         TextApp.SINGUP,
         style: TextStyle(
@@ -52,8 +53,15 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 DesingAssets.titleCustom(),
-                MyLoginButton(TextApp.LOGIN, Theme.of(context).primaryColor,
-                    Colors.white, LoginScreen(), 50.0),
+                MyLoginButton(
+                  text: TextApp.LOGIN,
+                  colorText: Theme.of(context).primaryColor,
+                  colorButtonBackgroud: Colors.white,
+                  widgetToNavigate: LoginScreen(),
+                  paddingTop: 50.0,
+                  fields: [],
+                  screen: "welcome",
+                ),
                 _singUp(context)
               ],
             ),
